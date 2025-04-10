@@ -94,7 +94,7 @@ export default function InternshipPage() {
             );
             payload.append("internshipTitle", selectedIntern.title);
 
-            const res = await fetch("https://daviselab-backend.onrender.com/api/apply", {
+            const res = await fetch("https://daviselab-backened-production.up.railway.app/api/apply", {
                 method: "POST",
                 body: payload,
             });

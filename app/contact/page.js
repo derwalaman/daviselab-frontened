@@ -26,7 +26,7 @@ export default function ContactPage() {
         setLoading(true);
 
         try {
-            const res = await fetch("https://daviselab-backend.onrender.com/api/contact", {
+            const res = await fetch("https://daviselab-backened-production.up.railway.app/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
