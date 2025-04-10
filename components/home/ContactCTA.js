@@ -16,8 +16,8 @@ const ContactCTA = () => {
           Get in Touch with DAVISE Lab
         </h2>
         <p className="text-lg text-gray-700 mb-8">
-          Whether you're interested in research, internships, or collaboration,
-          we'd love to hear from you. Let's build the future of intelligent systems together.
+          Whether you&apos;re interested in research, internships, or collaboration,
+          we&apos;d love to hear from you. Let&apos;s build the future of intelligent systems together.
         </p>
 
         <Link href="/contact">

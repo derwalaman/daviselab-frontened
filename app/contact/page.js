@@ -54,7 +54,7 @@ export default function ContactPage() {
             <section className="text-center py-20 bg-gradient-to-r from-pink-100 via-yellow-100 to-blue-100">
                 <h1 className="text-5xl md:text-6xl font-extrabold text-blue-800">💬 Contact DAVISE Lab</h1>
                 <p className="text-lg text-gray-700 mt-4 max-w-xl mx-auto">
-                    We'd love to hear from you — whether you're a student, researcher, or collaborator.
+                    We&apos;d love to hear from you — whether you&apos;re a student, researcher, or collaborator.
                 </p>
             </section>
 
