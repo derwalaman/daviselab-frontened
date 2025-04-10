@@ -34,9 +34,7 @@ export default function ContactPage() {
                 body: JSON.stringify(formData),
             });
 
-            if (!res.ok) {
-                throw new Error("Submission failed");
-            }
+            if (!res.ok) throw new Error("Submission failed");
 
             alert("Form sent successfully!");
             setFormData({ name: "", email: "", message: "" });
@@ -49,21 +47,23 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="bg-gradient-to-br from-orange-50 via-white to-sky-100 text-gray-800 min-h-screen">
-            {/* 🎯 Hero */}
-            <section className="text-center py-20 bg-gradient-to-r from-pink-100 via-yellow-100 to-blue-100">
-                <h1 className="text-5xl md:text-6xl font-extrabold text-blue-800">💬 Contact DAVISE Lab</h1>
-                <p className="text-lg text-gray-700 mt-4 max-w-xl mx-auto">
+        <main className="bg-gradient-to-br from-orange-50 via-white to-sky-100 text-gray-800">
+            {/* Hero */}
+            <section className="text-center py-16 sm:py-20 bg-gradient-to-r from-pink-100 via-yellow-100 to-blue-100 px-4">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-800">
+                    💬 Contact DAVISE Lab
+                </h1>
+                <p className="text-base sm:text-lg text-gray-700 mt-4 max-w-xl mx-auto">
                     We&apos;d love to hear from you — whether you&apos;re a student, researcher, or collaborator.
                 </p>
             </section>
 
-            {/* 📞 Contact Info + Form */}
-            <section className="grid md:grid-cols-2 gap-12 px-6 md:px-12 lg:px-32 py-20">
+            {/* Contact Info + Form */}
+            <section className="flex flex-col-reverse lg:flex-row gap-16 px-4 sm:px-8 md:px-12 lg:px-20 py-16">
                 {/* Left: Contact Info */}
-                <div className="space-y-10">
-                    <h2 className="text-3xl font-bold text-blue-900">Get in Touch</h2>
-                    <div className="space-y-5 text-lg">
+                <div className="lg:w-1/2 space-y-10">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Get in Touch</h2>
+                    <div className="space-y-5 text-base sm:text-lg">
                         <div className="flex items-center gap-3">
                             <Image src="/icons/email.png" alt="email" width={24} height={24} />
                             <span>davise@nitdelhi.ac.in</span>
@@ -78,8 +78,8 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    {/* 🌐 Social Links */}
-                    <div className="pt-4">
+                    {/* Social Links */}
+                    <div>
                         <h3 className="text-lg font-semibold text-blue-800 mb-3">Follow Us</h3>
                         <div className="flex items-center gap-5">
                             <Link href="https://instagram.com/nitd_davise" target="_blank">
@@ -96,8 +96,11 @@ export default function ContactPage() {
                 </div>
 
                 {/* Right: Contact Form */}
-                <form onSubmit={handleSubmit} className="bg-white border-2 border-blue-100 shadow-xl rounded-2xl p-10 space-y-6">
-                    <h2 className="text-2xl font-bold text-blue-700">Send us a message</h2>
+                <form
+                    onSubmit={handleSubmit}
+                    className="lg:w-1/2 bg-white border border-blue-200 shadow-xl rounded-2xl p-6 sm:p-10 space-y-6"
+                >
+                    <h2 className="text-xl sm:text-2xl font-bold text-blue-700">Send us a message</h2>
                     <input
                         name="name"
                         value={formData.name}
@@ -142,13 +145,16 @@ export default function ContactPage() {
                 </form>
             </section>
 
-            {/* 📍 How to Reach */}
-            <section className="px-6 md:px-12 lg:px-32 py-20 text-center bg-gradient-to-br from-sky-50 to-orange-50">
-                <h2 className="text-3xl font-bold text-blue-900 mb-6">📍 How to Reach NIT Delhi</h2>
-                <p className="text-gray-700 max-w-3xl mx-auto mb-10">
-                    Located near GT Karnal Road, NIT Delhi is easily accessible via Metro (Jahangirpuri/Samaypur Badli) and roadways. Take a cab or auto from the nearest station.
+            {/* Map Section */}
+            <section className="px-4 sm:px-8 md:px-12 lg:px-20 py-16 text-center bg-gradient-to-br from-sky-50 to-orange-50">
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">
+                    📍 How to Reach NIT Delhi
+                </h2>
+                <p className="text-gray-700 max-w-3xl mx-auto mb-10 text-sm sm:text-base">
+                    Located near GT Karnal Road, NIT Delhi is easily accessible via Metro (Jahangirpuri/Samaypur Badli) and roadways.
+                    Take a cab or auto from the nearest station.
                 </p>
-                <div className="w-full h-96 rounded-xl overflow-hidden shadow-md">
+                <div className="w-full h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-md">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.7495055428058!2d77.13039097631508!3d28.816537775564804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b1923ada2e3%3A0x1169930518add2fe!2sNational%20Institute%20of%20Technology%20Delhi!5e0!3m2!1sen!2sin!4v1744286633237!5m2!1sen!2sin"
                         width="100%"
@@ -156,8 +162,8 @@ export default function ContactPage() {
                         allowFullScreen=""
                         loading="lazy"
                         className="border-0 w-full h-full"
-                        referrerPolicy="no-referrer-when-downgrade">
-                    </iframe>
+                        referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                 </div>
             </section>
         </main>

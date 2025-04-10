@@ -5,22 +5,22 @@ import Link from "next/link";
 const facilities = [
     {
         title: "Autonomous Systems Lab",
-        icon: <Rocket className="w-6 h-6" />,
+        icon: <Rocket className="w-8 h-8 md:w-10 md:h-10" />,
         desc: "A high-tech lab focused on AI-powered robotics and drones with motion capture, simulation, and real-time control systems.",
     },
     {
         title: "Embedded Systems Studio",
-        icon: <CircuitBoard className="w-6 h-6" />,
+        icon: <CircuitBoard className="w-8 h-8 md:w-10 md:h-10" />,
         desc: "Equipped with microcontroller kits, sensors, and real-time processing tools for IoT and hardware prototyping.",
     },
     {
         title: "AI & ML Compute Cluster",
-        icon: <Server className="w-6 h-6" />,
+        icon: <Server className="w-8 h-8 md:w-10 md:h-10" />,
         desc: "High-performance GPUs and a private compute server optimized for deep learning research and model training.",
     },
     {
         title: "Precision Agriculture Zone",
-        icon: <Microscope className="w-6 h-6" />,
+        icon: <Microscope className="w-8 h-8 md:w-10 md:h-10" />,
         desc: "Experimental setup for smart farming, integrated with real-time sensing, drone imaging, and data analytics.",
     },
 ];
@@ -30,17 +30,21 @@ export default function InfrastructurePage() {
         <main className="bg-gradient-to-b from-white via-blue-50 to-sky-50 min-h-screen">
 
             {/* Hero Section */}
-            <section className="w-full text-center py-20 bg-gradient-to-br from-sky-50 via-white to-orange-50">
-                <h1 className="text-5xl font-extrabold text-blue-800 mb-4">Our Research Infrastructure</h1>
-                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <section className="w-full text-center py-16 md:py-20 bg-gradient-to-br from-sky-50 via-white to-orange-50 px-4">
+                <h1 className="text-3xl md:text-5xl font-extrabold text-blue-800 mb-4">
+                    Our Research Infrastructure
+                </h1>
+                <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
                     Cutting-edge labs, equipment, and collaborative spaces that power our innovation.
                 </p>
             </section>
 
             {/* Facilities Grid */}
-            <section className="py-16 px-6 md:px-12 lg:px-24 xl:px-32">
-                <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Featured Labs & Facilities</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <section className="py-14 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32">
+                <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-10">
+                    Featured Labs & Facilities
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {facilities.map((item, i) => (
                         <div
                             key={i}
@@ -57,12 +61,12 @@ export default function InfrastructurePage() {
             </section>
 
             {/* Facility Image Showcase */}
-            <section className="w-full py-20 bg-white text-center">
-                <h2 className="text-3xl font-bold text-blue-900 mb-6">Take a Closer Look</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
+            <section className="w-full py-16 md:py-20 bg-white text-center px-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Take a Closer Look</h2>
+                <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-12 text-base md:text-lg">
                     A glimpse into our physical space that sparks innovation and collaboration.
                 </p>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-12 lg:px-24 xl:px-32">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"].map((img, i) => (
                         <div key={i} className="rounded-xl overflow-hidden shadow hover:shadow-lg transition">
                             <Image
@@ -70,7 +74,7 @@ export default function InfrastructurePage() {
                                 alt={`Infrastructure ${i + 1}`}
                                 width={500}
                                 height={300}
-                                className="object-cover w-full h-56"
+                                className="object-cover w-full h-56 sm:h-64 md:h-72"
                             />
                         </div>
                     ))}
@@ -78,9 +82,9 @@ export default function InfrastructurePage() {
             </section>
 
             {/* Stats Section */}
-            <section className="bg-blue-100 py-20 text-center text-blue-900">
-                <h3 className="text-3xl font-bold mb-6">Infrastructure Highlights</h3>
-                <div className="flex flex-wrap justify-center gap-10 font-semibold text-lg">
+            <section className="bg-blue-100 py-16 md:py-20 text-center text-blue-900 px-4">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">Infrastructure Highlights</h3>
+                <div className="flex flex-wrap justify-center gap-6 md:gap-10 font-semibold text-base md:text-lg">
                     <div>🔬 4 Dedicated Labs</div>
                     <div>💻 12+ GPU Compute Nodes</div>
                     <div>📡 40+ Sensors & Devices</div>
@@ -89,9 +93,9 @@ export default function InfrastructurePage() {
             </section>
 
             {/* CTA Section */}
-            <section className="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center py-16">
-                <h3 className="text-3xl font-bold mb-4">Visit or Collaborate with Us</h3>
-                <p className="text-lg mb-6 max-w-xl mx-auto">
+            <section className="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center py-14 md:py-16 px-4">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Visit or Collaborate with Us</h3>
+                <p className="text-base md:text-lg mb-6 max-w-xl mx-auto">
                     Industry partners, researchers, and students are welcome to explore our labs or propose joint ventures.
                 </p>
                 <Link

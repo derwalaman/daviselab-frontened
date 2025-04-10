@@ -36,15 +36,15 @@ export default function ResearchPage() {
     return (
         <main className="bg-gradient-to-b from-white via-sky-50 to-blue-50 min-h-screen">
             {/* Hero Section */}
-            <section className="w-full py-20 text-center bg-gradient-to-br from-orange-50 via-white to-sky-50 rounded-xl">
-                <h1 className="text-5xl font-extrabold text-blue-800 mb-4">Explore Our Research</h1>
-                <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <section className="w-full py-16 md:py-20 text-center bg-gradient-to-br from-orange-50 via-white to-sky-50 rounded-xl px-4">
+                <h1 className="text-3xl md:text-5xl font-extrabold text-blue-800 mb-4">Explore Our Research</h1>
+                <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
                     From AI-driven agriculture to autonomous systems and predictive health — DAVISE Lab is building the future.
                 </p>
             </section>
 
             {/* Tags Section */}
-            <section className="w-full py-6 flex flex-wrap justify-center gap-4">
+            <section className="w-full py-6 flex flex-wrap justify-center gap-3 px-4">
                 {["AI", "IoT", "Climate", "Robotics", "HealthTech", "Autonomous Systems"].map((tag) => (
                     <span
                         key={tag}
@@ -56,16 +56,16 @@ export default function ResearchPage() {
             </section>
 
             {/* Projects Grid */}
-            <section className="py-16 px-6 md:px-12 lg:px-24">
-                <h2 className="text-3xl font-bold text-center text-blue-900 mb-10">Highlighted Projects</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <section className="py-12 md:py-16 px-4 sm:px-6 md:px-12 lg:px-24">
+                <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-10">Highlighted Projects</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     {researchProjects.map((project, i) => (
                         <Link
                             href={`/research/${project.slug}`}
                             key={i}
                             className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-200"
                         >
-                            <div className="relative h-56 overflow-hidden">
+                            <div className="relative h-48 sm:h-56 overflow-hidden">
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -76,13 +76,13 @@ export default function ResearchPage() {
                                 </div>
                             </div>
 
-                            <div className="p-6">
+                            <div className="p-5 sm:p-6">
                                 <div className="flex items-center gap-2 text-blue-700 mb-1">
                                     <BookOpen className="w-5 h-5" />
                                     <span className="text-sm font-medium uppercase">Research Project</span>
                                 </div>
 
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-700 transition">
+                                <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-700 transition">
                                     {project.title}
                                 </h3>
 
@@ -99,12 +99,12 @@ export default function ResearchPage() {
             </section>
 
             {/* Impact Section */}
-            <section className="w-full bg-white py-20 text-center mt-12">
-                <h3 className="text-3xl font-bold text-blue-800 mb-4">Why Our Research Matters</h3>
-                <p className="text-gray-600 max-w-3xl mx-auto mb-8 text-lg">
+            <section className="w-full bg-white py-16 md:py-20 text-center px-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Why Our Research Matters</h3>
+                <p className="text-gray-600 max-w-3xl mx-auto mb-8 text-base md:text-lg">
                     At DAVISE Lab, our innovations directly impact agriculture, healthcare, and the environment through real-world applications.
                 </p>
-                <div className="flex flex-wrap justify-center gap-6 text-blue-700 font-semibold text-lg">
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-blue-700 font-semibold text-base md:text-lg">
                     <div>🌾 25+ Smart Farming Prototypes</div>
                     <div>🚁 10+ Drone Autonomy Models</div>
                     <div>🧠 5+ AI Health Models</div>
@@ -113,9 +113,9 @@ export default function ResearchPage() {
             </section>
 
             {/* CTA */}
-            <section className="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center py-16">
-                <h3 className="text-3xl font-bold mb-4">Collaborate With DAVISE Lab</h3>
-                <p className="text-lg mb-6">
+            <section className="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center py-12 md:py-16 px-4">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Collaborate With DAVISE Lab</h3>
+                <p className="text-base md:text-lg mb-6 max-w-2xl mx-auto">
                     Are you a researcher, student, or industry partner? Reach out to explore internship, research, or innovation opportunities.
                 </p>
                 <Link
