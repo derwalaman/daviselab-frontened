@@ -1,4 +1,3 @@
-// components/Footer.js
 import Link from "next/link";
 
 export default function Footer() {
@@ -12,7 +11,8 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+        {/* Hides links on small screens, shows on md and above */}
+        <div className="hidden md:flex flex-wrap justify-center gap-4 text-sm text-gray-600">
           <Link href="/" className="hover:text-blue-700 transition">Home</Link>
           <Link href="/about" className="hover:text-blue-700 transition">About</Link>
           <Link href="/internship" className="hover:text-blue-700 transition">Internship</Link>
