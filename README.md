@@ -29,16 +29,6 @@ This is the official frontend for the [DAVISE Lab](https://www.nitdelhi.ac.in) w
 
 ---
 
-## 📁 Project Structure
-
-daviselab-frontend/ ├── app/ │ ├── (pages like about, research, internships, contact) │ └── layout.js / page.js ├── components/ │ ├── ui/ │ ├── Navbar.js │ ├── Footer.js │ └── sections/ (Hero, AboutPreview, etc.) ├── public/ ├── styles/ ├── utils/ └── tailwind.config.mjs
-
-yaml
-Copy
-Edit
-
----
-
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
@@ -46,26 +36,23 @@ Edit
 ```bash
 git clone https://github.com/your-username/daviselab-frontend.git
 cd daviselab-frontend
-2. Install Dependencies
-bash
-Copy
-Edit
+```
+
+### 2. Install Dependencies
+
+```bash
 npm install
-3. Run the Development Server
-bash
-Copy
-Edit
+```
+
+### 3. Run the Development Server
+
+```bash
 npm run dev
-Open http://localhost:3000 in your browser to see the result.
 
-🔧 Environment Variables (Optional)
-If connecting to the backend, create a .env.local file and add:
+// Open http://localhost:3000 in your browser to see the result.
+```
 
-env
-Copy
-Edit
-NEXT_PUBLIC_API_BASE_URL=http://localhost:5001
-🔗 Pages
+## 🔗 Pages
 / — Homepage
 
 /about — About the lab
@@ -78,7 +65,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:5001
 
 /contact — Contact form
 
-📦 Deployment
+## 📦 Deployment
 You can deploy this app easily using:
 
 Vercel (recommended for Next.js)
@@ -87,14 +74,11 @@ Netlify
 
 GitHub Pages (via static export)
 
-🧠 About DAVISE Lab
+## 🧠 About DAVISE Lab
 DAVISE (Data Analysis, Vision and Intelligent Systems Engineering) Lab at NIT Delhi focuses on research in AI, ML, Computer Vision, and Intelligent Systems.
 
-🤝 Contributing
+## 🤝 Contributing
 Feel free to open issues or submit pull requests to improve the site. Contributions are always welcome!
 
-📄 License
-Licensed under the MIT License.
-
-🧩 Related Repositories
-DAVISELab Backend — Node.js + Express backend
+## 🧩 Related Repositories
+[DAVISELab Backend](https://github.com/derwalaman/daviselab-backened) — Node.js + Express backend
