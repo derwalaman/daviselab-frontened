@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DAVISELab Frontend
 
-## Getting Started
+This is the official frontend for the [DAVISE Lab](https://www.nitdelhi.ac.in) website at **NIT Delhi**, built using **Next.js**, **Tailwind CSS**, and **shadcn/ui**. It serves as a modern, responsive, and dynamic interface to showcase lab research, infrastructure, internship opportunities, and contact details.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- 🏠 Beautiful and responsive homepage  
+- 🔬 Dynamic research highlights and project listings  
+- 🏛️ Infrastructure showcase with images  
+- 🎓 Internship application form with form validation  
+- ✉️ Contact form integrated with backend  
+- 🌙 Light/Dark theme support with toggle  
+- 🧩 Component-based architecture using shadcn/ui  
+- 🎨 Clean and consistent Tailwind CSS design system  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js** (App Router)
+- **Tailwind CSS**
+- **shadcn/ui** (Radix + Tailwind UI)
+- **Framer Motion** (animations)
+- **Lucide Icons**
+- **React Hook Form + Zod** (form validation)
+- **Axios** (API integration)
+
+---
+
+## 📁 Project Structure
+
+daviselab-frontend/ ├── app/ │ ├── (pages like about, research, internships, contact) │ └── layout.js / page.js ├── components/ │ ├── ui/ │ ├── Navbar.js │ ├── Footer.js │ └── sections/ (Hero, AboutPreview, etc.) ├── public/ ├── styles/ ├── utils/ └── tailwind.config.mjs
+
+yaml
+Copy
+Edit
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/your-username/daviselab-frontend.git
+cd daviselab-frontend
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Run the Development Server
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔧 Environment Variables (Optional)
+If connecting to the backend, create a .env.local file and add:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+env
+Copy
+Edit
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5001
+🔗 Pages
+/ — Homepage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+/about — About the lab
 
-## Learn More
+/research — Research highlights
 
-To learn more about Next.js, take a look at the following resources:
+/internships — Apply for internships
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+/infrastructure — Lab facilities
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/contact — Contact form
 
-## Deploy on Vercel
+📦 Deployment
+You can deploy this app easily using:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Vercel (recommended for Next.js)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Netlify
+
+GitHub Pages (via static export)
+
+🧠 About DAVISE Lab
+DAVISE (Data Analysis, Vision and Intelligent Systems Engineering) Lab at NIT Delhi focuses on research in AI, ML, Computer Vision, and Intelligent Systems.
+
+🤝 Contributing
+Feel free to open issues or submit pull requests to improve the site. Contributions are always welcome!
+
+📄 License
+Licensed under the MIT License.
+
+🧩 Related Repositories
+DAVISELab Backend — Node.js + Express backend
